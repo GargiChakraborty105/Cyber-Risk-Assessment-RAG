@@ -1,9 +1,9 @@
 import pandas as pd
 
 # Read data from Excel files
-incident_history = pd.read_excel("incident_history.xlsx")
-mock_tests = pd.read_excel("mock_tests.xlsx")
-user_behavior = pd.read_excel("user_behavior.xlsx")
+incident_history = pd.read_excel("datasets/incident_history.xlsx")
+mock_tests = pd.read_excel("datasets/mock_tests.xlsx")
+user_behavior = pd.read_excel("datasets/user_behavior.xlsx")
 
 # Display loaded datasets
 print("Incident History Data:")

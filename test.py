@@ -1,121 +1,158 @@
-import openai
 import pandas as pd
 
 # Load datasets
-incident_history = pd.read_excel("incident_history.xlsx")
-mock_tests = pd.read_excel("mock_tests.xlsx")
-user_behavior = pd.read_excel("user_behavior.xlsx")
-
-# Set your OpenAI API key
-openai.api_key = "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"
+incident_history = pd.read_excel("datasets/incident_history.xlsx")
+mock_tests = pd.read_excel("datasets/mock_tests.xlsx")
+user_behavior = pd.read_excel("datasets/user_behavior.xlsx")
 
 # Merge datasets
 merged_data = pd.merge(user_behavior, mock_tests, on="Employee_ID", how="outer")
 merged_data = pd.merge(merged_data, incident_history, on="Employee_ID", how="outer")
 
-# Function to create a detailed prompt for each employee
-def create_detailed_prompt(row):
-    return f"""
-    You are a cybersecurity expert and are tasked with analyzing an employee's behavior and performance to assess their cybersecurity risk. Based on the data provided below, generate a comprehensive Risk Assessment Report for the employee, ensuring that the results are clear, actionable, and aligned with organizational goals for improving cybersecurity.
+# Ensure that columns with numeric data are correctly cast to their respective types
+merged_data['Severity'] = pd.to_numeric(merged_data['Severity'], errors='coerce')
+merged_data['Resolution_Time_Days'] = pd.to_numeric(merged_data['Resolution_Time_Days'], errors='coerce')
+merged_data['Score_Percentage'] = pd.to_numeric(merged_data['Score_Percentage'], errors='coerce')
+merged_data['Login_Attempts'] = pd.to_numeric(merged_data['Login_Attempts'], errors='coerce')
+merged_data['Suspicious_Access_Flags'] = pd.to_numeric(merged_data['Suspicious_Access_Flags'], errors='coerce')
+merged_data['Device_Sharing_Instances'] = pd.to_numeric(merged_data['Device_Sharing_Instances'], errors='coerce')
 
-    **Employee Data**:
+# Function to assess Employee-Specific Training Needs
+def calculate_employee_training_needs(row):
+    training_needs = []
 
-    **User Behavior**:
-    - Login Attempts: {row['Login_Attempts']}
-    - Files Accessed: {row['Files_Accessed']}
-    - Suspicious Access Flags: {row['Suspicious_Access_Flags']}
-    - Device Sharing Instances: {row['Device_Sharing_Instances']}
-    - Phishing Email Clicks: {row['Phishing_Email_Clicks']}
+    # 1. User Access Behavior Risk
+    if row['Login_Attempts'] > 5:
+        training_needs.append("Recommend additional training on secure login practices.")
+    if row['Suspicious_Access_Flags'] > 0:
+        training_needs.append("Recommend training on identifying and preventing unauthorized access.")
+    
+    # 2. Incident History Severity
+    if row['Severity'] >= 3:  # High severity
+        training_needs.append("Recommend incident response and threat management training.")
+    if row['Resolution_Time_Days'] > 7:
+        training_needs.append("Recommend training on incident reporting and faster resolution strategies.")
+    
+    # 3. Security Awareness Readiness
+    if row['Score_Percentage'] < 60:
+        training_needs.append("Recommend refresher training on phishing awareness and data privacy.")
+    
+    # 4. Device and Data Sharing Behavior
+    if row['Device_Sharing_Instances'] > 2:
+        training_needs.append("Recommend training on secure device management and data protection.")
+    
+    return ', '.join(training_needs) if training_needs else "No specific training needs identified."
 
-    **Mock Test Performance**:
-    - Test Score Percentage: {row['Score_Percentage']}
-    - Pass/Fail: {row['Pass_Fail']}
+# Function to assess Organization-Level Security Gaps & Controls
+def calculate_org_security_gaps(row):
+    security_gaps = []
+    controls_needed = []
+    criticality = []
+    steps_needed = []
 
-    **Incident History**:
-    - Incident Type: {row['Incident_Type']}
-    - Incident Severity: {row['Severity']}
-    - Resolution Time (days): {row['Resolution_Time_Days']}
-    - Status: {row['Status']}
+    # 1. User Access Behavior Risk
+    if row['Login_Attempts'] > 5:
+        security_gaps.append("High login attempts detected, indicating potential brute force risks.")
+        controls_needed.append("Strengthen authentication policies, implement multi-factor authentication.")
+        criticality.append("H")
+        steps_needed.append("Implement CAPTCHA, enforce multi-factor authentication (MFA).")
+    elif 3 <= row['Login_Attempts'] <= 5:
+        security_gaps.append("Moderate login attempts detected, indicating potential unauthorized access risks.")
+        controls_needed.append("Monitor login activities and educate users on secure login practices.")
+        criticality.append("L")
+        steps_needed.append("Increase monitoring and provide secure login reminders.")
 
-    The following parameters will guide your risk assessment:
-    1. **User Access Behavior Risk**: Evaluate login attempts, file access patterns, suspicious activity flags, and phishing email interactions.
-    2. **Incident History Severity**: Consider the severity and frequency of incidents, as well as resolution time and recurrence.
-    3. **Security Awareness Readiness**: Assess the employee's security awareness based on mock test performance.
-    4. **Device and Data Sharing Behavior**: Examine device sharing patterns and incidents of data exfiltration.
+    if row['Suspicious_Access_Flags'] > 0:
+        security_gaps.append("Suspicious access flags raised, indicating possible compromised accounts or insider threats.")
+        controls_needed.append("Enhance monitoring and alerts for suspicious access behavior.")
+        criticality.append("H")
+        steps_needed.append("Increase monitoring on login activities, implement anomaly detection systems.")
+    
+    # 2. Incident History Severity
+    if row['Severity'] >= 3:
+        security_gaps.append("High-severity incidents detected, indicating possible gaps in employee security awareness.")
+        controls_needed.append("Provide organization-wide training on incident response and security protocols.")
+        criticality.append("H")
+        steps_needed.append("Launch targeted training programs on threat awareness and incident response.")
+    elif 1 <= row['Severity'] < 3:
+        security_gaps.append("Low-severity incidents detected, indicating minor security concerns.")
+        controls_needed.append("Monitor incident patterns and provide basic security awareness.")
+        criticality.append("L")
+        steps_needed.append("Conduct periodic awareness training for low-risk behaviors.")
+    
+    if row['Resolution_Time_Days'] > 7:
+        security_gaps.append("Long resolution times observed, indicating inefficiencies in incident management.")
+        controls_needed.append("Implement a more efficient incident response process and training.")
+        criticality.append("M")
+        steps_needed.append("Revise incident management process to reduce response time, provide additional training.")
+    
+    # 3. Security Awareness Readiness
+    if row['Score_Percentage'] < 60:
+        security_gaps.append("Low security awareness based on mock test performance.")
+        controls_needed.append("Implement company-wide refresher training on security topics such as phishing and secure login.")
+        criticality.append("H")
+        steps_needed.append("Increase frequency of phishing simulations, provide more in-depth security awareness courses.")
+    elif 50 <= row['Score_Percentage'] < 60:
+        security_gaps.append("Moderate security awareness based on mock test performance.")
+        controls_needed.append("Provide additional resources and minor refresher training.")
+        criticality.append("L")
+        steps_needed.append("Share online resources and conduct optional refresher sessions.")
+    
+    # 4. Device and Data Sharing Behavior
+    if row['Device_Sharing_Instances'] > 2:
+        security_gaps.append("Frequent device sharing observed, which may violate security policies.")
+        controls_needed.append("Enforce stricter device management and access control policies.")
+        criticality.append("M")
+        steps_needed.append("Implement policies restricting device sharing, enforce encryption on shared devices.")
+    elif 1 <= row['Device_Sharing_Instances'] <= 2:
+        security_gaps.append("Low levels of device sharing observed, which could lead to minor security risks.")
+        controls_needed.append("Educate employees on risks of device sharing and best practices.")
+        criticality.append("L")
+        steps_needed.append("Provide guidance on secure device sharing practices.")
 
-    **Please provide the following structured results for this employee**:
-    1. **RAG Ratings**: Provide a Red-Amber-Green (RAG) rating for:
-        - User Behavior: Assess based on login behavior, suspicious access flags, and phishing email clicks.
-        - Incident History: Evaluate based on severity and frequency of past incidents.
-        - Security Awareness Readiness: Assess based on test performance (scores, trends).
-    2. **Key Risk Factors**: List the most critical security risks identified from the provided data.
-        - Focus on areas like weak login patterns, recurring incidents, low security awareness, and improper data handling.
-    3. **Overall Risk Level**: Based on all the above factors, assess the overall risk level for the employee (Low, Medium, or High).
-    4. **Actionable Recommendations**: Provide clear and actionable recommendations to mitigate risks and improve the employee's security posture. These could include:
-        - Training in specific areas (e.g., phishing awareness, secure login).
-        - Process improvements (e.g., reducing login attempts, improving incident resolution time).
-        - Security policy changes (e.g., restricting device sharing, securing data).
-        
-    **Make sure to base your recommendations on the data provided, and tailor them specifically to the employee's situation. Ensure that each of your responses is actionable and can be implemented by the employee or organization to reduce cybersecurity risk.**
-    """
+    return (
+        ', '.join(security_gaps) if security_gaps else "No organizational security gaps identified.",
+        ', '.join(controls_needed) if controls_needed else "No controls needed.",
+        ', '.join(criticality) if criticality else "No criticality assigned.",
+        ', '.join(steps_needed) if steps_needed else "No steps identified."
+    )
 
+# Lists to store results for Employee-Specific Training Needs and Organizational Security Gaps
+employee_training_results = []
+org_security_results = []
 
-
-# List to store detailed results
-results = []
-
-# Process each employee
+# Process each employee and calculate the training needs and security gaps
 for _, row in merged_data.iterrows():
-    try:
-        # Generate a unique prompt for the employee
-        prompt = create_detailed_prompt(row)
+    # Calculate training needs
+    training_needs = calculate_employee_training_needs(row)
 
-        # Call OpenAI API
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",  # Use "gpt-4" for better results if available
-            messages=[
-                {"role": "system", "content": "You are a cybersecurity risk assessment expert."},
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=700,
-            temperature=0.7
-        )
+    # Calculate organizational security gaps and controls
+    security_gaps, controls_needed, criticality, steps_needed = calculate_org_security_gaps(row)
 
-        # Parse the response
-        generated_report = response['choices'][0]['message']['content']
-        
-        # Extract sections with error handling
-        rag_ratings = "Not provided"
-        key_risks = "Not provided"
-        overall_risk = "Not provided"
-        recommendations = "Not provided"
+    # Append results
+    employee_training_results.append({
+        "Employee_ID": row['Employee_ID'],
+        "Training Needs": training_needs
+    })
 
-        # Attempt to parse expected sections from the report
-        if "RAG Ratings:" in generated_report:
-            rag_ratings = generated_report.split("RAG Ratings:")[1].split("\n")[0].strip()
-        if "Key Risk Factors:" in generated_report:
-            key_risks = generated_report.split("Key Risk Factors:")[1].split("\n")[0].strip()
-        if "Overall Risk Level:" in generated_report:
-            overall_risk = generated_report.split("Overall Risk Level:")[1].split("\n")[0].strip()
-        if "Actionable Recommendations:" in generated_report:
-            recommendations = generated_report.split("Actionable Recommendations:")[1].strip()
+    org_security_results.append({
+        "Security Gaps": security_gaps,
+        "Controls Needed": controls_needed,
+        "Criticality": criticality,
+        "Steps Needed": steps_needed
+    })
 
-        # Append structured results
-        results.append({
-            "Employee_ID": row['Employee_ID'],
-            "RAG Ratings": rag_ratings,
-            "Key Risk Factors": key_risks,
-            "Overall Risk Level": overall_risk,
-            "Actionable Recommendations": recommendations,
-        })
+# Convert the employee-specific training needs results into a DataFrame
+employee_training_df = pd.DataFrame(employee_training_results)
 
-    except Exception as e:
-        print(f"Error processing Employee_ID {row['Employee_ID']}: {e}")
+# Convert the organizational security loopholes results into a DataFrame
+org_security_df = pd.DataFrame(org_security_results)
 
-# Convert results into a DataFrame
-results_df = pd.DataFrame(results)
+# Save the reports to Excel
+with pd.ExcelWriter("reports/employee_specific_training_needs.xlsx") as writer:
+    employee_training_df.to_excel(writer, sheet_name="Training Needs", index=False)
 
-# Save the detailed employee-level report to Excel
-results_df.to_excel("detailed_risk_assessment_report.xlsx", index=False)
+with pd.ExcelWriter("reports/organizational_security_loopholes.xlsx") as writer:
+    org_security_df.to_excel(writer, sheet_name="Security Gaps & Controls", index=False)
 
-print("Detailed Risk Assessment Report saved to 'detailed_risk_assessment_report.xlsx'.")
+print("Reports saved as 'employee_specific_training_needs.xlsx' and 'organizational_security_loopholes.xlsx'.")
