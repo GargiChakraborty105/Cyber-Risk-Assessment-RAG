@@ -170,8 +170,8 @@ openai.api_key = "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"
 def get_training_needs(employee_data):
     prompt = f"""
 For the following employee data, provide their training needs in the json format:
-- Employee_ID: {employee_data['Employee_ID']}
-- Training Needs: A string contains detailed and structured sentence that describe of training recommendations. If no training is needed, state "No specific training needs identified." without any reasoning.
+- "Employee_ID": {employee_data['Employee_ID']}
+- "Training Needs": A string contains detailed and structured sentence that describe of training recommendations. If no training is needed, state "No specific training needs identified." without any reasoning.
 
 Employee Data:
 - Login Attempts: {employee_data['Login_Attempts']}
@@ -217,10 +217,10 @@ Guidelines:
 
 
 Return the result in this structured json format:
-- Security Gaps: A String Description of gaps. If No significant security gaps identified based on employee data, state "No significant security gaps identified based on employee data".
-- Controls Needed: A String that describe Specific controls for addressing the gaps. If No significant security gaps identified based on employee data, state "None".
-- Criticality: Levels (L, M, H). If No significant security gaps identified based on employee data, state "L".
-- Steps Needed: A string that describe Detailed actions to resolve the gaps. If No significant security gaps identified based on employee data, state "None".
+- "Security Gaps": A String Description of gaps. If No significant security gaps identified based on employee data, state "No significant security gaps identified based on employee data".
+- "Controls Needed": A String that describe Specific controls for addressing the gaps. If No significant security gaps identified based on employee data, state "None".
+- "Criticality": Levels (L, M, H). If No significant security gaps identified based on employee data, state "L".
+- "Steps Needed": A string that describe Detailed actions to resolve the gaps. If No significant security gaps identified based on employee data, state "None".
 """
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",  # Specify the model you're using
@@ -235,6 +235,11 @@ Return the result in this structured json format:
 # Streamlit App
 st.title("Cybersecurity Training and Gap Analysis")
 
+if "employee_training_file" not in st.session_state:
+    st.session_state.employee_training_file = None
+if "org_security_file" not in st.session_state:
+    st.session_state.org_security_file = None
+
 # File uploads
 st.sidebar.header("Upload Data")
 incident_history_file = st.sidebar.file_uploader("Upload Incident History (Excel)", type=["xlsx"])
@@ -242,6 +247,8 @@ mock_tests_file = st.sidebar.file_uploader("Upload Mock Tests (Excel)", type=["x
 user_behavior_file = st.sidebar.file_uploader("Upload User Behavior (Excel)", type=["xlsx"])
 
 if st.sidebar.button("Process and Generate Reports"):
+    st.session_state.org_security_file = None
+    st.session_state.employee_training_file = None
     if incident_history_file and mock_tests_file and user_behavior_file:
         # Load datasets
         incident_history = pd.read_excel(incident_history_file)
@@ -304,30 +311,33 @@ if st.sidebar.button("Process and Generate Reports"):
             os.makedirs("reports")
 
         # Save reports in 'reports' directory
-        employee_training_file = os.path.join("reports", "employee_specific_training_needs.xlsx")
-        org_security_file = os.path.join("reports", "organizational_security_loopholes.xlsx")
-        with pd.ExcelWriter(employee_training_file) as writer:
+        st.session_state.employee_training_file = os.path.join("reports", "employee_specific_training_needs.xlsx")
+        st.session_state.org_security_file = os.path.join("reports", "organizational_security_loopholes.xlsx")
+        with pd.ExcelWriter(st.session_state.employee_training_file) as writer:
             employee_training_df.to_excel(writer, sheet_name="Training Needs", index=False)
 
-        with pd.ExcelWriter(org_security_file) as writer:
+        with pd.ExcelWriter(st.session_state.org_security_file) as writer:
             org_security_df.to_excel(writer, sheet_name="Security Gaps & Controls", index=False)
 
         st.success("Reports generated successfully!")
-        with open(employee_training_file, "rb") as f:
-            st.download_button(
-                label="Download Employee Training Needs",
-                data=f,
-                file_name="employee_specific_training_needs.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
-
-        with open(org_security_file, "rb") as f:
-            st.download_button(
-                label="Download Security Gaps Report",
-                data=f,
-                file_name="organizational_security_loopholes.xlsx",
-                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
-
+        
     else:
         st.error("Please upload all required files.")
+
+# Display download buttons if files are generated
+if st.session_state.employee_training_file and st.session_state.org_security_file:
+    with open(st.session_state.employee_training_file, "rb") as f:
+        st.download_button(
+            label="Download Employee Training Needs",
+            data=f,
+            file_name="employee_specific_training_needs.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
+
+    with open(st.session_state.org_security_file, "rb") as f:
+        st.download_button(
+            label="Download Security Gaps Report",
+            data=f,
+            file_name="organizational_security_loopholes.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
