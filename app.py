@@ -156,3 +156,160 @@ with pd.ExcelWriter("reports/organizational_security_loopholes.xlsx") as writer:
     org_security_df.to_excel(writer, sheet_name="Security Gaps & Controls", index=False)
 
 print("Reports saved as 'employee_specific_training_needs.xlsx' and 'organizational_security_loopholes.xlsx'.")
+
+
+# import os
+# import pandas as pd
+# import streamlit as st
+# import openai
+
+# # Set OpenAI API Key (ensure not to hard-code in production)
+# openai.api_key = "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"
+
+# # Function to interact with OpenAI for training needs
+# def get_training_needs(employee_data):
+#     prompt = f"""
+# For the following employee data, provide their training needs in the format:
+# - Employee_ID: {employee_data['Employee_ID']}
+# - Training Needs: A detailed and structured list of training recommendations. If no training is needed, state "No specific training needs identified."
+
+# Employee Data:
+# - Login Attempts: {employee_data['Login_Attempts']}
+# - Suspicious Access Flags: {employee_data['Suspicious_Access_Flags']}
+# - Severity: {employee_data['Severity']}
+# - Resolution Time Days: {employee_data['Resolution_Time_Days']}
+# - Score Percentage: {employee_data['Score_Percentage']}
+# - Device Sharing Instances: {employee_data['Device_Sharing_Instances']}
+
+# Guidelines:
+# 1. If Login Attempts > 5 or Suspicious Access Flags > 0, recommend training on secure login and unauthorized access prevention.
+# 2. If Severity >= 3 or Resolution Time > 7 days, recommend training on incident reporting and faster resolution strategies.
+# 3. If Score Percentage < 60, recommend refresher training on phishing awareness and secure login practices.
+# 4. If Device Sharing Instances > 2, recommend training on secure device management and data protection.
+# """
+#     response = openai.ChatCompletion.create(
+#         model="gpt-3.5-turbo",
+#         messages=[
+#             {"role": "system", "content": "You are an expert in cybersecurity training needs assessment."},
+#             {"role": "user", "content": prompt}
+#         ]
+#     )
+#     return response['choices'][0]['message']['content']
+
+# # Function to interact with OpenAI for security gaps and controls
+# def get_security_gaps(employee_data):
+#     prompt = f"""
+# Based on the following employee data, identify security gaps, controls needed, criticality, and specific steps in a structured table format:
+# Employee Data:
+# - Login Attempts: {employee_data['Login_Attempts']}
+# - Suspicious Access Flags: {employee_data['Suspicious_Access_Flags']}
+# - Severity: {employee_data['Severity']}
+# - Resolution Time Days: {employee_data['Resolution_Time_Days']}
+# - Score Percentage: {employee_data['Score_Percentage']}
+# - Device Sharing Instances: {employee_data['Device_Sharing_Instances']}
+
+# Guidelines:
+# 1. If Login Attempts > 5 or Suspicious Access Flags > 0, identify gaps like potential unauthorized access risks. Suggest controls like stronger authentication policies and monitoring.
+# 2. If Severity >= 3 or Resolution Time > 7 days, identify gaps in incident management. Suggest faster resolution processes and training.
+# 3. If Score Percentage < 60, highlight low security awareness. Suggest training and phishing simulations.
+# 4. If Device Sharing Instances > 2, flag policy violations. Suggest stricter device management policies.
+
+# Return the result in this structured format:
+# - Security Gaps: Description of gaps
+# - Controls Needed: Specific controls for addressing the gaps
+# - Criticality: Levels (L, M, H)
+# - Steps Needed: Detailed actions to resolve the gaps
+# """
+#     response = openai.ChatCompletion.create(
+#         model="gpt-3.5-turbo",
+#         messages=[
+#             {"role": "system", "content": "You are an expert in organizational security gap analysis."},
+#             {"role": "user", "content": prompt}
+#         ]
+#     )
+#     return response['choices'][0]['message']['content']
+
+# # Streamlit App
+# st.title("Cybersecurity Training and Gap Analysis")
+
+# # File uploads
+# st.sidebar.header("Upload Data")
+# incident_history_file = st.sidebar.file_uploader("Upload Incident History (Excel)", type=["xlsx"])
+# mock_tests_file = st.sidebar.file_uploader("Upload Mock Tests (Excel)", type=["xlsx"])
+# user_behavior_file = st.sidebar.file_uploader("Upload User Behavior (Excel)", type=["xlsx"])
+
+# if st.sidebar.button("Process and Generate Reports"):
+#     if incident_history_file and mock_tests_file and user_behavior_file:
+#         # Load datasets
+#         incident_history = pd.read_excel(incident_history_file)
+#         mock_tests = pd.read_excel(mock_tests_file)
+#         user_behavior = pd.read_excel(user_behavior_file)
+
+#         # Merge datasets
+#         merged_data = pd.merge(user_behavior, mock_tests, on="Employee_ID", how="outer")
+#         merged_data = pd.merge(merged_data, incident_history, on="Employee_ID", how="outer")
+
+#         # Ensure numeric data is correctly cast
+#         numeric_columns = [
+#             "Severity", 
+#             "Resolution_Time_Days", 
+#             "Score_Percentage", 
+#             "Login_Attempts", 
+#             "Suspicious_Access_Flags", 
+#             "Device_Sharing_Instances"
+#         ]
+#         for column in numeric_columns:
+#             merged_data[column] = pd.to_numeric(merged_data[column], errors="coerce")
+
+#         # Lists to store results
+#         employee_training_results = []
+#         org_security_results = []
+
+#         # Process each employee
+#         for _, row in merged_data.iterrows():
+#             employee_data = row.to_dict()
+
+#             # Get training needs
+#             training_needs = get_training_needs(employee_data)
+#             employee_training_results.append({
+#                 "Employee_ID": employee_data['Employee_ID'],
+#                 "Training Needs": training_needs.strip()
+#             })
+
+#             # Get security gaps and controls
+#             security_gaps = get_security_gaps(employee_data)
+#             lines = [line for line in security_gaps.split("\n") if line.strip()]  # Remove empty lines
+
+#             # Safely extract data with fallback
+#             gap_data = {
+#                 "Security Gaps": lines[0].split(": ", 1)[1].strip() if len(lines) > 0 and ": " in lines[0] else "N/A",
+#                 "Controls Needed": lines[1].split(": ", 1)[1].strip() if len(lines) > 1 and ": " in lines[1] else "N/A",
+#                 "Criticality": lines[2].split(": ", 1)[1].strip() if len(lines) > 2 and ": " in lines[2] else "N/A",
+#                 "Steps Needed": lines[3].split(": ", 1)[1].strip() if len(lines) > 3 and ": " in lines[3] else "N/A",
+#             }
+#             org_security_results.append(gap_data)
+
+#         # Convert results to DataFrames
+#         employee_training_df = pd.DataFrame(employee_training_results)
+#         org_security_df = pd.DataFrame(org_security_results)
+
+#         # Ensure the 'reports' directory exists
+#         if not os.path.exists("reports"):
+#             os.makedirs("reports")
+
+#         # Save reports in 'reports' directory
+#         employee_training_file = os.path.join("reports", "employee_specific_training_needs.xlsx")
+#         org_security_file = os.path.join("reports", "organizational_security_loopholes.xlsx")
+
+#         with pd.ExcelWriter(employee_training_file) as writer:
+#             employee_training_df.to_excel(writer, sheet_name="Training Needs", index=False)
+
+#         with pd.ExcelWriter(org_security_file) as writer:
+#             org_security_df.to_excel(writer, sheet_name="Security Gaps & Controls", index=False)
+
+#         st.success("Reports generated successfully!")
+#         st.markdown(f"Download Employee Training Needs: [Download](reports/employee_specific_training_needs.xlsx)")
+#         st.markdown(f"Download Security Gaps Report: [Download](reports/organizational_security_loopholes.xlsx)")
+
+#     else:
+#         st.error("Please upload all required files.")
