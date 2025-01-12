@@ -1,0 +1,51 @@
+Use Case ID,Use Case Description,Actors,Interactions,System Boundaries
+UC-1,User role management,"User, Database",Admin manages user roles,Website frontend and backend
+UC-2,User role management,"Admin, Support Team",Admin manages user roles,Website frontend and backend
+UC-3,Password reset functionality,"Admin, Support Team",System processes payment,Website frontend and backend
+UC-4,Profile management,"Customer, Payment Gateway",System processes payment,Payment API
+UC-5,Admin dashboard access,"Admin, System",System processes payment,User interface and third-party integrations
+UC-6,Content publishing,"Admin, Support Team",User submits login credentials,Admin panel and database
+UC-7,Order placement,"Admin, System",System processes payment,Mobile app and server
+UC-8,Payment processing,"User, Database",System processes payment,Payment API
+UC-9,Profile management,"User, Database",User submits login credentials,Mobile app and server
+UC-10,Product search and filtering,"User, Database",Admin reviews orders,Payment API
+UC-11,Password reset functionality,"Admin, Support Team",System processes payment,User interface and third-party integrations
+UC-12,Product search and filtering,"Admin, Support Team",Admin manages user roles,Mobile app and server
+UC-13,Profile management,"User, Database",User filters products by category,Website frontend and backend
+UC-14,User registration and login,"Customer, Payment Gateway",Customer tracks order status,Payment API
+UC-15,Payment processing,"Customer, Payment Gateway",User submits login credentials,Payment API
+UC-16,Password reset functionality,"Customer, Admin",User filters products by category,User interface and third-party integrations
+UC-17,Admin dashboard access,"Admin, Support Team",User filters products by category,Admin panel and database
+UC-18,Content publishing,"Admin, Content Management System",User submits login credentials,Payment API
+UC-19,User role management,"Admin, Support Team",System processes payment,Mobile app and server
+UC-20,Content publishing,"Admin, Content Management System",Admin reviews orders,Payment API
+UC-21,Product search and filtering,"User, System",Customer tracks order status,Website frontend and backend
+UC-22,Report generation,"Admin, Support Team",Admin manages user roles,Payment API
+UC-23,Password reset functionality,"User, Database",User submits login credentials,Mobile app and server
+UC-24,Content publishing,"Admin, System",Admin manages user roles,Admin panel and database
+UC-25,Admin dashboard access,"Customer, Payment Gateway",User submits login credentials,Website frontend and backend
+UC-26,Admin dashboard access,"User, Database",Admin manages user roles,User interface and third-party integrations
+UC-27,Admin dashboard access,"User, System",User submits login credentials,Mobile app and server
+UC-28,Order placement,"Admin, Content Management System",User filters products by category,User interface and third-party integrations
+UC-29,Password reset functionality,"User, System",User submits login credentials,Admin panel and database
+UC-30,User registration and login,"Customer, Payment Gateway",System processes payment,Website frontend and backend
+UC-31,Payment processing,"Admin, System",User submits login credentials,Admin panel and database
+UC-32,Report generation,"Customer, Payment Gateway",User submits login credentials,Mobile app and server
+UC-33,User registration and login,"User, System",Admin reviews orders,Admin panel and database
+UC-34,Password reset functionality,"Admin, Support Team",Admin manages user roles,Website frontend and backend
+UC-35,User registration and login,"User, Database",Admin reviews orders,Payment API
+UC-36,Report generation,"Customer, Admin",Customer tracks order status,User interface and third-party integrations
+UC-37,Admin dashboard access,"User, Database",User filters products by category,Website frontend and backend
+UC-38,Admin dashboard access,"User, Database",Admin reviews orders,Admin panel and database
+UC-39,Profile management,"Admin, Support Team",Admin reviews orders,Payment API
+UC-40,User role management,"Admin, System",User filters products by category,Mobile app and server
+UC-41,Order placement,"Admin, Support Team",Admin reviews orders,Website frontend and backend
+UC-42,Admin dashboard access,"Customer, Admin",Admin reviews orders,Website frontend and backend
+UC-43,Product search and filtering,"Admin, Content Management System",Admin manages user roles,User interface and third-party integrations
+UC-44,Admin dashboard access,"Customer, Payment Gateway",User submits login credentials,Payment API
+UC-45,Product search and filtering,"Admin, Support Team",Admin reviews orders,Admin panel and database
+UC-46,Report generation,"Admin, System",System processes payment,Mobile app and server
+UC-47,Report generation,"Admin, System",User filters products by category,Website frontend and backend
+UC-48,Profile management,"Admin, System",Admin manages user roles,User interface and third-party integrations
+UC-49,Product search and filtering,"Customer, Admin",User submits login credentials,User interface and third-party integrations
+UC-50,Payment processing,"Customer, Admin",System processes payment,Admin panel and database

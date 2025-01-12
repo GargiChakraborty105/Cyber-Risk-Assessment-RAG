@@ -1,0 +1,51 @@
+Stakeholder,Original Requirement,Consolidated Requirement
+Developer,Data Security,Robust User Authentication
+Analyst,API Integration,Integrated API Security
+Team Lead,Data Security,Robust User Authentication
+Manager,API Integration,Enhanced Data Encryption
+Team Lead,Data Security,Integrated API Security
+Manager,API Integration,Robust User Authentication
+Developer,User Authentication,Enhanced Data Encryption
+Manager,API Integration,Integrated API Security
+Team Lead,API Integration,Enhanced Data Encryption
+Analyst,API Integration,Enhanced Data Encryption
+Team Lead,Data Security,Integrated API Security
+Team Lead,API Integration,Robust User Authentication
+Team Lead,User Authentication,Integrated API Security
+Analyst,API Integration,Integrated API Security
+Analyst,Data Security,Enhanced Data Encryption
+Product Owner,API Integration,Robust User Authentication
+Manager,API Integration,Enhanced Data Encryption
+Manager,Data Security,Robust User Authentication
+Product Owner,User Authentication,Robust User Authentication
+Manager,System Scalability,Enhanced Data Encryption
+Team Lead,System Scalability,Integrated API Security
+Manager,API Integration,Integrated API Security
+Analyst,API Integration,Integrated API Security
+Team Lead,Data Security,Enhanced Data Encryption
+Manager,API Integration,Enhanced Data Encryption
+Developer,User Authentication,Robust User Authentication
+Manager,User Authentication,Enhanced Data Encryption
+Product Owner,API Integration,Enhanced Data Encryption
+Developer,System Scalability,Enhanced Data Encryption
+Analyst,System Scalability,Integrated API Security
+Team Lead,Data Security,Integrated API Security
+Product Owner,Data Security,Integrated API Security
+Manager,User Authentication,Robust User Authentication
+Analyst,Data Security,Enhanced Data Encryption
+Product Owner,Data Security,Integrated API Security
+Manager,API Integration,Integrated API Security
+Manager,System Scalability,Robust User Authentication
+Analyst,System Scalability,Integrated API Security
+Developer,System Scalability,Enhanced Data Encryption
+Developer,System Scalability,Integrated API Security
+Analyst,API Integration,Integrated API Security
+Manager,User Authentication,Enhanced Data Encryption
+Product Owner,User Authentication,Enhanced Data Encryption
+Product Owner,API Integration,Robust User Authentication
+Developer,API Integration,Enhanced Data Encryption
+Manager,User Authentication,Robust User Authentication
+Product Owner,System Scalability,Integrated API Security
+Team Lead,User Authentication,Enhanced Data Encryption
+Manager,API Integration,Integrated API Security
+Manager,API Integration,Integrated API Security

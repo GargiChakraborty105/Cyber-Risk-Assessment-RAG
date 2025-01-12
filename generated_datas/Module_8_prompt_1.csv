@@ -1,0 +1,51 @@
+Metric,Description,Visualization Method
+Task Completion Rate,Current risk status of the project,Bar chart
+Risk Levels,Total budget spent vs planned,Line chart
+Budget Spent,Current risk status of the project,Gauge chart
+Resource Utilization,Current risk status of the project,Gauge chart
+Budget Spent,Percentage of tasks completed in time,Line chart
+Task Completion Rate,Current risk status of the project,Heatmap
+Resource Utilization,List of completed milestones and pending,Heatmap
+Resource Utilization,List of completed milestones and pending,Line chart
+Milestones Achieved,Percentage of tasks completed in time,Line chart
+Risk Levels,Total budget spent vs planned,Pie chart
+Budget Spent,Total budget spent vs planned,Pie chart
+Budget Spent,Current risk status of the project,Heatmap
+Milestones Achieved,Total budget spent vs planned,Gauge chart
+Milestones Achieved,Total budget spent vs planned,Pie chart
+Budget Spent,Current risk status of the project,Line chart
+Task Completion Rate,Percentage of tasks completed in time,Gauge chart
+Task Completion Rate,Percentage of tasks completed in time,Heatmap
+Budget Spent,Percentage of resources utilized compared to the plan,Pie chart
+Resource Utilization,Percentage of tasks completed in time,Line chart
+Resource Utilization,Total budget spent vs planned,Pie chart
+Risk Levels,Percentage of resources utilized compared to the plan,Heatmap
+Resource Utilization,Current risk status of the project,Heatmap
+Task Completion Rate,Total budget spent vs planned,Line chart
+Budget Spent,Total budget spent vs planned,Pie chart
+Budget Spent,Total budget spent vs planned,Pie chart
+Milestones Achieved,Total budget spent vs planned,Gauge chart
+Task Completion Rate,Percentage of tasks completed in time,Gauge chart
+Risk Levels,List of completed milestones and pending,Gauge chart
+Milestones Achieved,Percentage of resources utilized compared to the plan,Gauge chart
+Resource Utilization,Percentage of resources utilized compared to the plan,Pie chart
+Resource Utilization,Current risk status of the project,Pie chart
+Risk Levels,List of completed milestones and pending,Pie chart
+Task Completion Rate,Percentage of resources utilized compared to the plan,Heatmap
+Budget Spent,Percentage of resources utilized compared to the plan,Bar chart
+Task Completion Rate,List of completed milestones and pending,Bar chart
+Resource Utilization,List of completed milestones and pending,Bar chart
+Task Completion Rate,Percentage of tasks completed in time,Gauge chart
+Budget Spent,Percentage of resources utilized compared to the plan,Gauge chart
+Risk Levels,List of completed milestones and pending,Heatmap
+Task Completion Rate,Total budget spent vs planned,Heatmap
+Milestones Achieved,List of completed milestones and pending,Bar chart
+Budget Spent,Current risk status of the project,Line chart
+Budget Spent,Current risk status of the project,Gauge chart
+Task Completion Rate,Current risk status of the project,Pie chart
+Milestones Achieved,Percentage of tasks completed in time,Pie chart
+Resource Utilization,Percentage of resources utilized compared to the plan,Bar chart
+Risk Levels,Percentage of resources utilized compared to the plan,Heatmap
+Task Completion Rate,Percentage of tasks completed in time,Gauge chart
+Task Completion Rate,Total budget spent vs planned,Bar chart
+Resource Utilization,Percentage of resources utilized compared to the plan,Bar chart

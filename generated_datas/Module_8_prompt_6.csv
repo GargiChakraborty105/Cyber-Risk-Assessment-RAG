@@ -1,0 +1,51 @@
+Metric,Planned Value,Actual Value,Variance,Corrective Action
+Resource Allocation,100,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442C00>,Implement automation tools
+Milestone Achievement,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442CA0>,Adjust project scope
+Quality Control,85,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442D40>,Implement automation tools
+Task Completion Rate,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442DE0>,Revise project timeline
+Milestone Achievement,100,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442E80>,Implement automation tools
+Milestone Achievement,85,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442F20>,Increase team collaboration
+Budget Utilization,85,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A442FC0>,Increase team collaboration
+Budget Utilization,90,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443060>,Reallocate resources
+Resource Allocation,85,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443100>,Adjust project scope
+Milestone Achievement,100,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4431A0>,Revise project timeline
+Quality Control,85,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443240>,Revise project timeline
+Task Completion Rate,85,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4432E0>,Implement automation tools
+Task Completion Rate,85,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443380>,Reallocate resources
+Resource Allocation,85,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443420>,Reallocate resources
+Quality Control,80,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4434C0>,Implement automation tools
+Milestone Achievement,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443560>,Adjust project scope
+Quality Control,95,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443600>,Revise project timeline
+Milestone Achievement,80,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4436A0>,Revise project timeline
+Task Completion Rate,95,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443740>,Increase team collaboration
+Budget Utilization,95,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4437E0>,Revise project timeline
+Resource Allocation,95,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443880>,Increase team collaboration
+Task Completion Rate,95,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443920>,Implement automation tools
+Task Completion Rate,80,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4439C0>,Reallocate resources
+Quality Control,80,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443A60>,Reallocate resources
+Milestone Achievement,80,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443B00>,Revise project timeline
+Milestone Achievement,90,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443BA0>,Reallocate resources
+Quality Control,80,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443C40>,Adjust project scope
+Task Completion Rate,80,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443CE0>,Implement automation tools
+Task Completion Rate,85,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443D80>,Revise project timeline
+Resource Allocation,100,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443E20>,Revise project timeline
+Task Completion Rate,95,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443EC0>,Implement automation tools
+Resource Allocation,95,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A443F60>,Implement automation tools
+Milestone Achievement,80,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454040>,Implement automation tools
+Task Completion Rate,90,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4540E0>,Reallocate resources
+Quality Control,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454180>,Adjust project scope
+Resource Allocation,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454220>,Implement automation tools
+Quality Control,80,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4542C0>,Reallocate resources
+Milestone Achievement,100,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454360>,Revise project timeline
+Milestone Achievement,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454400>,Implement automation tools
+Task Completion Rate,95,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4544A0>,Adjust project scope
+Resource Allocation,90,80,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454540>,Increase team collaboration
+Resource Allocation,80,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4545E0>,Adjust project scope
+Task Completion Rate,100,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454680>,Implement automation tools
+Task Completion Rate,90,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454720>,Reallocate resources
+Milestone Achievement,80,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4547C0>,Implement automation tools
+Task Completion Rate,90,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454860>,Implement automation tools
+Budget Utilization,85,70,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454900>,Adjust project scope
+Task Completion Rate,95,85,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A4549A0>,Increase team collaboration
+Quality Control,90,92,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454A40>,Adjust project scope
+Resource Allocation,90,100,<function generate_prompt_6_module_8.<locals>.<listcomp>.<lambda> at 0x000001D23A454AE0>,Revise project timeline

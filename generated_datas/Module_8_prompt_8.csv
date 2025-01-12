@@ -1,0 +1,51 @@
+Task,Bottleneck Description,AI Recommendation
+Task C,Slow decision-making process,Reallocate resources
+Task E,Insufficient budget allocation,Reallocate resources
+Task E,Poor communication between teams,Increase team communication
+Task B,Slow decision-making process,Increase budget allocation for the task
+Task A,Slow decision-making process,Reallocate resources
+Task E,Poor communication between teams,Reallocate resources
+Task B,Poor communication between teams,Increase team communication
+Task C,Slow decision-making process,Streamline decision-making process
+Task E,Delayed resource allocation,Increase team communication
+Task C,Delayed resource allocation,Streamline decision-making process
+Task B,Slow decision-making process,Increase budget allocation for the task
+Task E,Delayed resource allocation,Reallocate resources
+Task C,Delayed resource allocation,Reallocate resources
+Task D,Insufficient budget allocation,Reallocate resources
+Task C,External dependency delay,Increase team communication
+Task B,Poor communication between teams,Streamline decision-making process
+Task B,External dependency delay,Streamline decision-making process
+Task D,Insufficient budget allocation,Increase budget allocation for the task
+Task E,Insufficient budget allocation,Streamline decision-making process
+Task D,External dependency delay,Streamline decision-making process
+Task E,External dependency delay,Negotiate with external vendors
+Task E,Slow decision-making process,Increase team communication
+Task E,Poor communication between teams,Streamline decision-making process
+Task A,Insufficient budget allocation,Increase team communication
+Task B,Poor communication between teams,Reallocate resources
+Task D,Insufficient budget allocation,Streamline decision-making process
+Task C,Slow decision-making process,Increase budget allocation for the task
+Task B,Insufficient budget allocation,Reallocate resources
+Task B,Poor communication between teams,Increase budget allocation for the task
+Task C,Delayed resource allocation,Increase budget allocation for the task
+Task B,Insufficient budget allocation,Increase budget allocation for the task
+Task B,Delayed resource allocation,Increase team communication
+Task C,Poor communication between teams,Increase budget allocation for the task
+Task D,External dependency delay,Negotiate with external vendors
+Task C,Delayed resource allocation,Reallocate resources
+Task C,Insufficient budget allocation,Streamline decision-making process
+Task D,External dependency delay,Increase budget allocation for the task
+Task D,Poor communication between teams,Increase budget allocation for the task
+Task C,Slow decision-making process,Negotiate with external vendors
+Task D,Delayed resource allocation,Reallocate resources
+Task B,Insufficient budget allocation,Reallocate resources
+Task D,Insufficient budget allocation,Negotiate with external vendors
+Task C,Poor communication between teams,Increase team communication
+Task D,Insufficient budget allocation,Streamline decision-making process
+Task B,Delayed resource allocation,Streamline decision-making process
+Task A,Slow decision-making process,Reallocate resources
+Task A,External dependency delay,Negotiate with external vendors
+Task B,External dependency delay,Increase team communication
+Task B,Delayed resource allocation,Reallocate resources
+Task A,External dependency delay,Increase budget allocation for the task

@@ -1,0 +1,51 @@
+Requirement ID,Test Scenario,Test Objective,Expected Outcome
+FR-1,Test user profile update,Verify user credentials,Search results filtered correctly
+FR-2,Test user profile update,Ensure data is displayed correctly,Order placed and confirmed
+FR-3,Test user profile update,Verify user credentials,User logged in successfully
+FR-4,Test user profile update,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-5,Test product search,Ensure payment gateway processes successfully,User logged in successfully
+FR-6,Test login functionality,Ensure data is displayed correctly,Order placed and confirmed
+FR-7,Test user profile update,Ensure payment gateway processes successfully,Search results filtered correctly
+FR-8,Test product search,Verify user credentials,Search results filtered correctly
+FR-9,Test product search,Ensure data is displayed correctly,User logged in successfully
+FR-10,Test product search,Verify user credentials,Order placed and confirmed
+FR-11,Test product search,Ensure payment gateway processes successfully,User logged in successfully
+FR-12,Test payment processing,Ensure data is displayed correctly,Search results filtered correctly
+FR-13,Test user profile update,Ensure data is displayed correctly,Order placed and confirmed
+FR-14,Test order placement,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-15,Test login functionality,Verify user credentials,User logged in successfully
+FR-16,Test user profile update,Verify user credentials,Search results filtered correctly
+FR-17,Test payment processing,Ensure data is displayed correctly,Search results filtered correctly
+FR-18,Test product search,Ensure data is displayed correctly,Search results filtered correctly
+FR-19,Test order placement,Verify user credentials,Search results filtered correctly
+FR-20,Test order placement,Ensure data is displayed correctly,Search results filtered correctly
+FR-21,Test product search,Ensure data is displayed correctly,Order placed and confirmed
+FR-22,Test login functionality,Ensure payment gateway processes successfully,Search results filtered correctly
+FR-23,Test product search,Verify user credentials,User logged in successfully
+FR-24,Test product search,Ensure data is displayed correctly,Order placed and confirmed
+FR-25,Test user profile update,Ensure data is displayed correctly,Search results filtered correctly
+FR-26,Test login functionality,Verify user credentials,Search results filtered correctly
+FR-27,Test product search,Ensure payment gateway processes successfully,User logged in successfully
+FR-28,Test product search,Verify user credentials,Search results filtered correctly
+FR-29,Test product search,Verify user credentials,Search results filtered correctly
+FR-30,Test user profile update,Verify user credentials,Order placed and confirmed
+FR-31,Test product search,Ensure data is displayed correctly,Order placed and confirmed
+FR-32,Test user profile update,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-33,Test login functionality,Verify user credentials,Order placed and confirmed
+FR-34,Test product search,Ensure data is displayed correctly,User logged in successfully
+FR-35,Test user profile update,Ensure data is displayed correctly,Order placed and confirmed
+FR-36,Test order placement,Ensure payment gateway processes successfully,User logged in successfully
+FR-37,Test payment processing,Ensure payment gateway processes successfully,Search results filtered correctly
+FR-38,Test login functionality,Verify user credentials,User logged in successfully
+FR-39,Test order placement,Ensure data is displayed correctly,User logged in successfully
+FR-40,Test user profile update,Verify user credentials,Search results filtered correctly
+FR-41,Test order placement,Verify user credentials,Order placed and confirmed
+FR-42,Test payment processing,Ensure payment gateway processes successfully,Search results filtered correctly
+FR-43,Test payment processing,Ensure data is displayed correctly,User logged in successfully
+FR-44,Test user profile update,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-45,Test user profile update,Ensure data is displayed correctly,User logged in successfully
+FR-46,Test order placement,Verify user credentials,Search results filtered correctly
+FR-47,Test user profile update,Ensure payment gateway processes successfully,User logged in successfully
+FR-48,Test product search,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-49,Test login functionality,Ensure payment gateway processes successfully,Order placed and confirmed
+FR-50,Test order placement,Ensure data is displayed correctly,Search results filtered correctly

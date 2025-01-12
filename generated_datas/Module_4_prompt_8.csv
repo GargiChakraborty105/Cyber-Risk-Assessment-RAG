@@ -1,0 +1,51 @@
+Requirement,Dependent Requirements,Critical Dependencies
+API Integration,System Reliability,No
+Data Encryption,User Authentication,No
+Data Encryption,User Authentication,No
+Scalability,User Authentication,Yes
+API Integration,System Reliability,Yes
+System Reliability,User Authentication,No
+Scalability,User Authentication,Yes
+Scalability,API Integration,No
+User Authentication,User Authentication,No
+Data Encryption,System Reliability,Yes
+Scalability,System Reliability,No
+User Authentication,System Reliability,No
+User Authentication,User Authentication,Yes
+User Authentication,API Integration,No
+User Authentication,System Reliability,Yes
+User Authentication,System Reliability,Yes
+Data Encryption,User Authentication,Yes
+API Integration,User Authentication,Yes
+User Authentication,API Integration,Yes
+Scalability,System Reliability,Yes
+Scalability,System Reliability,No
+Data Encryption,API Integration,No
+User Authentication,User Authentication,Yes
+Data Encryption,System Reliability,Yes
+User Authentication,User Authentication,Yes
+System Reliability,User Authentication,Yes
+Scalability,System Reliability,No
+API Integration,System Reliability,Yes
+System Reliability,System Reliability,Yes
+User Authentication,System Reliability,Yes
+System Reliability,System Reliability,Yes
+API Integration,System Reliability,Yes
+Scalability,API Integration,No
+System Reliability,System Reliability,No
+System Reliability,User Authentication,No
+Data Encryption,User Authentication,No
+API Integration,API Integration,No
+System Reliability,User Authentication,No
+Data Encryption,System Reliability,No
+API Integration,System Reliability,No
+User Authentication,System Reliability,No
+Scalability,System Reliability,Yes
+API Integration,API Integration,No
+Scalability,API Integration,No
+API Integration,API Integration,Yes
+Scalability,System Reliability,Yes
+System Reliability,API Integration,No
+System Reliability,System Reliability,Yes
+API Integration,System Reliability,No
+System Reliability,System Reliability,No

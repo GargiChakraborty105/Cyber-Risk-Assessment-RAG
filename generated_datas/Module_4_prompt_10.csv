@@ -1,0 +1,51 @@
+Conflicting Requirement,Impact,Resolution Strategy
+API Integration,Quality Compromise,Increase Resources
+User Authentication,Delays in Timeline,Increase Resources
+User Authentication,Quality Compromise,Re-negotiate Requirements
+System Scalability,Increased Cost,Increase Resources
+Data Encryption,Increased Cost,Re-negotiate Requirements
+System Scalability,Quality Compromise,Re-negotiate Requirements
+System Scalability,Delays in Timeline,Re-negotiate Requirements
+API Integration,Increased Cost,Change Project Scope
+API Integration,Delays in Timeline,Re-negotiate Requirements
+System Scalability,Quality Compromise,Increase Resources
+User Authentication,Quality Compromise,Increase Resources
+User Authentication,Quality Compromise,Increase Resources
+System Scalability,Increased Cost,Increase Resources
+Data Encryption,Delays in Timeline,Increase Resources
+User Authentication,Increased Cost,Increase Resources
+User Authentication,Delays in Timeline,Increase Resources
+System Scalability,Quality Compromise,Re-negotiate Requirements
+Data Encryption,Increased Cost,Re-negotiate Requirements
+System Scalability,Increased Cost,Increase Resources
+User Authentication,Delays in Timeline,Increase Resources
+Data Encryption,Delays in Timeline,Change Project Scope
+API Integration,Quality Compromise,Change Project Scope
+API Integration,Increased Cost,Increase Resources
+API Integration,Quality Compromise,Re-negotiate Requirements
+User Authentication,Increased Cost,Re-negotiate Requirements
+Data Encryption,Quality Compromise,Increase Resources
+Data Encryption,Delays in Timeline,Increase Resources
+User Authentication,Delays in Timeline,Change Project Scope
+System Scalability,Quality Compromise,Increase Resources
+API Integration,Increased Cost,Re-negotiate Requirements
+API Integration,Increased Cost,Increase Resources
+API Integration,Delays in Timeline,Re-negotiate Requirements
+System Scalability,Quality Compromise,Re-negotiate Requirements
+User Authentication,Delays in Timeline,Re-negotiate Requirements
+System Scalability,Increased Cost,Re-negotiate Requirements
+System Scalability,Delays in Timeline,Change Project Scope
+Data Encryption,Delays in Timeline,Change Project Scope
+Data Encryption,Increased Cost,Change Project Scope
+System Scalability,Quality Compromise,Increase Resources
+API Integration,Delays in Timeline,Re-negotiate Requirements
+Data Encryption,Increased Cost,Increase Resources
+API Integration,Quality Compromise,Re-negotiate Requirements
+Data Encryption,Quality Compromise,Change Project Scope
+User Authentication,Delays in Timeline,Re-negotiate Requirements
+API Integration,Increased Cost,Re-negotiate Requirements
+API Integration,Delays in Timeline,Increase Resources
+System Scalability,Increased Cost,Re-negotiate Requirements
+User Authentication,Delays in Timeline,Re-negotiate Requirements
+User Authentication,Increased Cost,Change Project Scope
+API Integration,Delays in Timeline,Increase Resources

@@ -1,0 +1,51 @@
+Requirement ID,Requirement Description,Priority Level
+FR-1,User login functionality,Medium
+FR-2,Role-based access control,High
+FR-3,Error handling mechanisms,Medium
+FR-4,Data encryption,Medium
+FR-5,Data encryption,Low
+FR-6,Real-time data sync,Medium
+FR-7,Audit logging,Medium
+FR-8,Payment gateway integration,High
+FR-9,Audit logging,Medium
+FR-10,Audit logging,Medium
+FR-11,Error handling mechanisms,High
+FR-12,Error handling mechanisms,Medium
+FR-13,Multilingual support,High
+FR-14,Notification system,High
+FR-15,User login functionality,High
+FR-16,Data validation,High
+FR-17,Data encryption,Low
+FR-18,Data validation,Medium
+FR-19,Multilingual support,Low
+FR-20,Role-based access control,High
+FR-21,Error handling mechanisms,Medium
+FR-22,Error handling mechanisms,High
+FR-23,User login functionality,Low
+FR-24,User login functionality,High
+FR-25,Notification system,High
+FR-26,Notification system,Low
+FR-27,Data validation,High
+FR-28,Notification system,Low
+FR-29,Data validation,Medium
+FR-30,Data encryption,Medium
+FR-31,Data validation,Low
+FR-32,Data validation,Low
+FR-33,Error handling mechanisms,Low
+FR-34,Role-based access control,High
+FR-35,Multilingual support,Medium
+FR-36,Real-time data sync,Low
+FR-37,Error handling mechanisms,Medium
+FR-38,Data encryption,High
+FR-39,Data validation,Low
+FR-40,Data validation,High
+FR-41,User login functionality,High
+FR-42,Notification system,High
+FR-43,Data validation,Medium
+FR-44,Audit logging,High
+FR-45,Role-based access control,Low
+FR-46,Payment gateway integration,High
+FR-47,Data validation,High
+FR-48,Payment gateway integration,High
+FR-49,User login functionality,High
+FR-50,Notification system,High

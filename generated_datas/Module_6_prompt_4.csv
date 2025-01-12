@@ -1,0 +1,51 @@
+Process Step,Step Description,Decision Points,Outputs
+Step 1,Order refunded,Has refund been processed?,Order status updated
+Step 2,Order cancelled,Is product in stock?,Invoice generated
+Step 3,Order shipped to customer,Is customer verified?,Order confirmation email sent
+Step 4,System checks inventory availability,Is customer verified?,Order confirmation email sent
+Step 5,Product delivered to customer,Is payment successful?,Order status updated
+Step 6,Order shipped to customer,Is product in stock?,Shipment tracking number issued
+Step 7,Product delivered to customer,Is customer verified?,Shipment tracking number issued
+Step 8,Product delivered to customer,Is product in stock?,Order status updated
+Step 9,Payment processed by system,Is order eligible for return?,Shipment tracking number issued
+Step 10,Invoice generated,Is payment successful?,Refund request submitted
+Step 11,Order shipped to customer,Is order eligible for return?,Feedback request sent
+Step 12,Payment processed by system,Has shipment left warehouse?,Feedback request sent
+Step 13,Order refunded,Has refund been processed?,Invoice generated
+Step 14,Customer initiates order,Is order eligible for return?,Order confirmation email sent
+Step 15,Invoice generated,Is order eligible for return?,Order confirmation email sent
+Step 16,Product delivered to customer,Is order eligible for return?,Refund request submitted
+Step 17,Payment processed by system,Is order eligible for return?,Refund request submitted
+Step 18,Order shipped to customer,Is payment successful?,Invoice generated
+Step 19,Product delivered to customer,Is order eligible for return?,Shipment tracking number issued
+Step 20,Order cancelled,Is payment successful?,Refund request submitted
+Step 21,Payment processed by system,Is order eligible for return?,Order status updated
+Step 22,Invoice generated,Is customer verified?,Refund request submitted
+Step 23,Customer provides feedback,Has refund been processed?,Order confirmation email sent
+Step 24,Order shipped to customer,Has refund been processed?,Feedback request sent
+Step 25,Product delivered to customer,Is product in stock?,Refund request submitted
+Step 26,Invoice generated,Is payment successful?,Feedback request sent
+Step 27,Customer initiates order,Has refund been processed?,Feedback request sent
+Step 28,Admin reviews order status,Is order eligible for return?,Invoice generated
+Step 29,Order shipped to customer,Is product in stock?,Shipment tracking number issued
+Step 30,Customer provides feedback,Is customer verified?,Refund request submitted
+Step 31,Admin reviews order status,Is order eligible for return?,Feedback request sent
+Step 32,System checks inventory availability,Is payment successful?,Invoice generated
+Step 33,Order cancelled,Is payment successful?,Invoice generated
+Step 34,Customer provides feedback,Is order eligible for return?,Feedback request sent
+Step 35,Customer initiates order,Has shipment left warehouse?,Shipment tracking number issued
+Step 36,Customer initiates order,Is payment successful?,Order status updated
+Step 37,Order shipped to customer,Is payment successful?,Order status updated
+Step 38,Customer initiates order,Is product in stock?,Invoice generated
+Step 39,System checks inventory availability,Is product in stock?,Feedback request sent
+Step 40,Customer initiates order,Is order eligible for return?,Feedback request sent
+Step 41,Payment processed by system,Is payment successful?,Refund request submitted
+Step 42,Customer initiates order,Is order eligible for return?,Invoice generated
+Step 43,Order cancelled,Has refund been processed?,Invoice generated
+Step 44,Customer provides feedback,Has refund been processed?,Order status updated
+Step 45,Customer provides feedback,Has shipment left warehouse?,Order confirmation email sent
+Step 46,Payment processed by system,Has refund been processed?,Invoice generated
+Step 47,Order refunded,Has refund been processed?,Feedback request sent
+Step 48,Customer initiates order,Is order eligible for return?,Feedback request sent
+Step 49,System checks inventory availability,Is product in stock?,Order confirmation email sent
+Step 50,Order refunded,Has shipment left warehouse?,Order status updated

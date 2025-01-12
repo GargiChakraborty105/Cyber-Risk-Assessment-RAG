@@ -1,0 +1,51 @@
+Requirement,Status,Risk Mitigation Recommendations
+System Reliability,At Risk,Increase Resources
+User Authentication,At Risk,Reassign Tasks
+System Reliability,In Progress,Extend Timeline
+API Integration,Completed,Extend Timeline
+API Integration,In Progress,Reassign Tasks
+User Authentication,In Progress,Extend Timeline
+User Authentication,Completed,Reassign Tasks
+User Authentication,Completed,Conduct Additional Testing
+Data Security,Completed,Increase Resources
+User Authentication,Completed,Extend Timeline
+User Authentication,In Progress,Extend Timeline
+User Authentication,Completed,Increase Resources
+Scalability,At Risk,Extend Timeline
+API Integration,Completed,Reassign Tasks
+Data Privacy,In Progress,Increase Resources
+User Authentication,In Progress,Conduct Additional Testing
+API Integration,Completed,Increase Resources
+API Integration,Completed,Increase Resources
+System Reliability,In Progress,Increase Resources
+User Authentication,In Progress,Extend Timeline
+Data Privacy,In Progress,Increase Resources
+System Reliability,At Risk,Reassign Tasks
+Data Privacy,Completed,Increase Resources
+Scalability,At Risk,Increase Resources
+Data Security,Completed,Reassign Tasks
+Data Privacy,Completed,Conduct Additional Testing
+Data Privacy,Completed,Increase Resources
+Data Privacy,At Risk,Reassign Tasks
+System Reliability,Completed,Conduct Additional Testing
+Data Privacy,In Progress,Reassign Tasks
+Data Security,Completed,Increase Resources
+User Authentication,Completed,Extend Timeline
+Data Security,Completed,Extend Timeline
+Data Security,At Risk,Extend Timeline
+Data Security,Completed,Extend Timeline
+API Integration,In Progress,Reassign Tasks
+System Reliability,At Risk,Increase Resources
+System Reliability,At Risk,Reassign Tasks
+System Reliability,At Risk,Conduct Additional Testing
+User Authentication,In Progress,Extend Timeline
+Data Security,Completed,Extend Timeline
+System Reliability,In Progress,Reassign Tasks
+User Authentication,At Risk,Reassign Tasks
+Data Privacy,In Progress,Conduct Additional Testing
+User Authentication,In Progress,Reassign Tasks
+API Integration,At Risk,Reassign Tasks
+API Integration,At Risk,Conduct Additional Testing
+Data Privacy,In Progress,Conduct Additional Testing
+Scalability,In Progress,Extend Timeline
+User Authentication,At Risk,Reassign Tasks

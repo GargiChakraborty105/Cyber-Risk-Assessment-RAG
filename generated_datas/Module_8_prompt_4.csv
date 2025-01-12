@@ -1,0 +1,51 @@
+Risk,Trigger,Alert Type
+Scope Creep,High number of defects,Phone Call
+Quality Issues,Exceeded 80% budget,Phone Call
+Quality Issues,Critical resource unavailable,Push Notification
+Budget Overrun,High number of defects,Email
+Delayed Deliverables,Scope change request,Phone Call
+Quality Issues,High number of defects,Email
+Quality Issues,Exceeded 80% budget,Email
+Budget Overrun,High number of defects,Push Notification
+Budget Overrun,High number of defects,Push Notification
+Budget Overrun,Delay in milestones,Phone Call
+Quality Issues,Critical resource unavailable,Dashboard Notification
+Scope Creep,Exceeded 80% budget,Phone Call
+Scope Creep,Exceeded 80% budget,Phone Call
+Resource Shortage,Delay in milestones,SMS
+Budget Overrun,Exceeded 80% budget,Phone Call
+Scope Creep,Exceeded 80% budget,Phone Call
+Delayed Deliverables,Scope change request,Push Notification
+Quality Issues,Critical resource unavailable,Dashboard Notification
+Delayed Deliverables,Exceeded 80% budget,Dashboard Notification
+Quality Issues,Delay in milestones,Phone Call
+Delayed Deliverables,Exceeded 80% budget,Phone Call
+Scope Creep,Scope change request,Dashboard Notification
+Budget Overrun,Delay in milestones,Dashboard Notification
+Resource Shortage,Delay in milestones,Phone Call
+Resource Shortage,Exceeded 80% budget,Push Notification
+Budget Overrun,High number of defects,Push Notification
+Scope Creep,Critical resource unavailable,Dashboard Notification
+Budget Overrun,Critical resource unavailable,Email
+Quality Issues,High number of defects,Phone Call
+Resource Shortage,Exceeded 80% budget,Phone Call
+Delayed Deliverables,Exceeded 80% budget,Email
+Budget Overrun,Critical resource unavailable,Email
+Resource Shortage,Exceeded 80% budget,SMS
+Quality Issues,Exceeded 80% budget,Push Notification
+Delayed Deliverables,Scope change request,Phone Call
+Delayed Deliverables,Delay in milestones,Email
+Scope Creep,Delay in milestones,Email
+Quality Issues,Scope change request,Phone Call
+Budget Overrun,Exceeded 80% budget,Email
+Budget Overrun,Critical resource unavailable,SMS
+Scope Creep,Exceeded 80% budget,SMS
+Budget Overrun,Exceeded 80% budget,Phone Call
+Resource Shortage,Critical resource unavailable,Email
+Delayed Deliverables,Critical resource unavailable,Push Notification
+Delayed Deliverables,Critical resource unavailable,Dashboard Notification
+Quality Issues,High number of defects,Dashboard Notification
+Budget Overrun,High number of defects,Phone Call
+Scope Creep,Scope change request,Dashboard Notification
+Resource Shortage,Scope change request,Push Notification
+Quality Issues,Exceeded 80% budget,Push Notification
