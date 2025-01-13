@@ -4,7 +4,7 @@ import streamlit as st
 import openai
 import json
 # Set OpenAI API Key (ensure not to hard-code in production)
-openai.api_key = "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"
+openai.api_key = "openai-api-key"
 
 # Function to interact with OpenAI for training needs
 def get_training_needs(employee_data):
